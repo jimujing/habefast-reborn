@@ -1,0 +1,56 @@
+
+Habefast Reborn Theme Changelog
+
+Version 1.0.0
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+On this version the field for versioning (intialy in brackets) will be used for dev name
+
+## [Gui] - 2018-05-25
+### Added
+- _main.scss in Components (scss)
+- _utilities.scss in Utilities (scss)
+- Rules for container and container-fluid paddings in _main-container.scss
+
+### Changed
+- moved _typo.scss to base as it makes more sense in the cascading logic (we want typo to come before _main.scss but utilities files to generally come last to overwrite _main.scss rules )
+
+### Removed
+- Commented out all elements on -html-elements.scss in PARENT THEME as not relevant to this project and trigger errors (variable syntax incorrect)
+
+===========================================
+
+## [Gui] - 2018-05-22
+### Added
+- single-custom.php in post-type-templates - Template for all cpt
+- content-service.php in contents - Template for content of cpt service
+- title-bar-base.php in templates-parts
+- filter to redirect custom post service to the the relevant template single-custom.php in filters.php in functions 
+- folder register and file custom-post-type.php to register cpt service
+- flexible content fields on service post 
+- flexible contents integration on comtent-service.php
+
+### Changed
+- only page template name to template-page-base.php (previous name conflict with template in parent's theme)
+
+### Removed
+- 
+
+===========================================
+
+## [Gui] - 2018-05-16
+### Added
+- filters.php in includes/functions
+- filter body_class to add a class to body based on ACF field body_class
+
+### Changed
+- 
+
+### Removed
+- on header.php > data attribute "data-classe-de-page" as this is not required anymore (cf filter body_class added)
+
+
